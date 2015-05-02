@@ -3,6 +3,6 @@ Schedule saved using local storage.
 Starts of time comparisons.
 
 ## To-Do
-Calender for marking holidays and timing.
+Basic scheduling
 Time comparisons.
-
+Homepage and something usable.
