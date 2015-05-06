@@ -1,11 +1,7 @@
 # schedule-test
-Schedule saved using local storage.
-Starts of time comparisons.
+Scrap.
 
 ## To-Do
-Basic scheduling
+Move to Google Drive for Trinity authentication!
 
-Time comparisons.
-
-Homepage and something usable.
 
