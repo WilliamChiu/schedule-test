@@ -1,7 +1,7 @@
 # schedule-test
-Scrap.
+Webapp meant to be used for Trinity students.
 
 ## To-Do
-Move to Google Drive for Trinity authentication!
+Will use node.js
 
 
