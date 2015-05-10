@@ -1,0 +1,6 @@
+CACHE MANIFEST
+# v0.1 : 7/5/2015 : Initial Release w/ basic functionality. Issues include dynamic url + security.
+# v0.2 : Title and favicon added.
+# v0.3 : Test disable manifest.
+//fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2
+favicon.ico
