@@ -1,35 +1,85 @@
-<html> <!--http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock-->
-<head>
-<script>
-var time;
-function startTime() {
-    var today=new Date();
-    var h=today.getHours();
-    var m=today.getMinutes();
-    var s=today.getSeconds();
-    var d=today.getDay();
-    m = checkTime(m);
-    s = checkTime(s);
-    time = h+":"+m+":"+s+" "+d;
-    document.getElementById('txt').innerHTML = time;
-    //if (time < "08:15:00") {
-    	document.getElementById("testClock").innerHTML = (8 - h)+":"+checkTime(15-m)+":"+checkTime(0-s) + " till " + localStorage.getItem("scheduleData").split(";")[7];
-    //}
-    var t = setTimeout(function(){startTime()},500);
-}
+<html manifest="webapp.appcache">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="apple-touch-icon" href="images/icon.png">
+        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+        
+        <title>Schedules</title>
+        
+        <style>
+            /**************************************************
+            No CSS file? I'm a lazy bastard.
+            ***************************************************
+            Scale elements based on device.
+            **************************************************/
+            
+            /* Taken from Google Fonts */
+            @font-face {
+              font-family: 'Open Sans';
+              font-style: normal;
+              font-weight: 400;
+              src: local('Open Sans'), local('OpenSans'), url(//fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+            }
 
-function checkTime(i) {
-    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
-}
-</script>
-</head>
+            @media (min-width: 858px) {
+                html {
+                    font-size: 13px;
+                }
+            }
 
-<body onload="startTime()">
+            @media (min-width: 780px) {
+                html {
+                    font-size: 12px;
+                }
+            }
 
-<div id="txt"></div>
-<div id="testClock"></div>
+            @media (min-width: 702px) {
+                html {
+                    font-size: 11px;
+                }
+            }
 
-<a href="schedule">Edit Schedule</a>
-</body>
+            @media (min-width: 724px) {
+                html {
+                    font-size: 10px;
+                }
+            }
+
+            @media (max-width: 623px) {
+                html {
+                    font-size: 8px;
+                }
+            }
+
+            /**************************************************
+            Based on http://responsivenews.co.uk/post/13925578846/fluid-grids-orientation-resolution-independence
+            I'm open to changing these values in the future, but they are a good place to start.
+            Keep in mind the rest of the site uses em. This means the rest of the site is scaled off the font-size defined above.
+            **************************************************/
+            
+            html {
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            body {
+            	margin:3em;
+            	color: #333;
+            }
+
+            h1 {
+            	font-size:5em;
+            }
+
+            p {
+            	font-size:2em;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hello Trinity!</h1>
+        <p>This is an upcoming webapp for Trinity students.</p>
+        <p>Hopefully, it will pull info from the Trinity website. If so, this could remain static and all will be good in the world.</p>
+    </body>
 </html>
